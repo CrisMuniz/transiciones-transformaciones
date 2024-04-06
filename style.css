@@ -8,13 +8,21 @@
    flex-direction: column;
    text-align: center;
    padding-top: 30px;
+   padding-bottom: 20px;
    font-family: "jura", sans-serif;
    font-size: 28px;
 }
 .container {
     background: #9cc3fa;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+}
+.mainTitle {
+    font-family: "jura", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    color:#C850C0;
 }
 .list {
     margin: 0;
@@ -48,3 +56,39 @@
 .box2:hover {
     transform: rotate(45deg);
 }
+.box3:hover {
+    transform:scale(1.2)
+}
+.box4:hover {
+    transform:skew(20deg, 10deg)
+}
+.box5:hover {
+    transform: matrix(1, 1.2, -1, 1, 10, 20)
+}
+.box6:hover {
+    /*Necesitamos indicarle el tipo de transformación que queremos y el origen de moviemiento de esa transfotmación*/
+    transform: rotate(20deg) ;
+    transform-origin:left top ;
+}
+/*Para hacer  una Transformación 3D jugamos con el style pero debemos tener en cuenta que hayq ue crear otro contenedor para hacer todo el movimiento*/
+.transform3d {
+    background-color: gray;
+    width: 70px;
+    height: 70px;
+    border-radius: 30%;
+    /* position: absolute; */
+    perspective: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+.box7 {
+    transform-style: preserve-3d;
+    margin-top: 0;
+
+}
+.box7:hover {
+    transform: rotateX(25deg);
+}
+
