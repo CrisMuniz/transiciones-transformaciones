@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        perspective: 8px;
+        perspective-origin: 50%;
+        overflow-x: hidden;
+        overflow-y: visible;
+        position: relative;
+        transform-origin: 0 50%;
+      }
+      .image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      .image__background {
+        width: 100%;
+        height: auto;
+        transform: translateZ(0px) scale(1);
+        /* transform-origin: 0 50%; */
+      }
+      .return {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        transform: translateY(40px);
+
+      }
+      a {
+        color:#C71585 ;
+        text-decoration: none;
+        font-family: "jura", sans-serif;
+        font-weight:bold;
+        background-color:#f8bd7d ;
+        width: 60px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      a:hover {
+    background-color:#e18c9f;
+    transform: scale(1.2);
+  }
+      .image__middle1 {
+        width: 150%;
+        height: 130%;
+        transform: translateZ(5.5px) scale(0.375);
+        transform-origin: 50%;
+      }
+      .image__foreground {
+        width: 200%;
+        height: 900%;
+        transform: translateZ(3px) scale(0.75);
+        transform-origin: 60%;
+      }
+      .icon {
+        width: 110px;
+        height: 120px;
+        position: absolute;
+        border-radius: 10px;
+        transform: rotate(-20);
+        background-image: url("images/paquete_volando_preview_rev_1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .one {
+        left: 30%;
+        top: 200px;
+      }
+      .two {
+        right: 20%;
+        top: 400px;
+      }
+      .three {
+        right: 20%;
+        bottom: -1000px;
+      }
+      .four {
+        left: 30%;
+        bottom: -800px;
+      }
+      .five {
+        right: 30%;
+        bottom: -1400px;
+      }
+      .six {
+        left: 10%;
+        bottom: -1800px;
+      }
+      .seven {
+        right: 40%;
+        bottom: -1600px;
+      }
+      .eigth {
+        left: 20%;
+        bottom: -2000px;
+      }
+      .nine {
+        right: 40%;
+        bottom: -2200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image image__background">
+        <img src="./images/cielo2 (2).avif" alt="" />
+      </div>
+      <div class="return"><a href="./index.html">Volver</a></div>
+      <div class="image image__middle1">
+        <img src="./images/avioneta_preview_rev_1.png" alt="" />
+      </div>
+      <div class="image image__middle2">
+        <div class="icon one"></div>
+        <div class="icon two"></div>
+        <div class="icon three"></div>
+        <div class="icon four"></div>
+        <div class="icon five"></div>
+        <div class="icon six"></div>
+        <div class="icon seven"></div>
+        <div class="icon eigth"></div>
+        <div class="icon nine"></div>
+      </div>
+      <div class="image image__foreground">
+        <img src="./images/paracaidista_preview_rev_1.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
