@@ -22,44 +22,45 @@
         perspective: 8px;
         perspective-origin: 50%;
         overflow-x: hidden;
-        overflow-y: visible;
+        overflow-y: auto;
         position: relative;
         transform-origin: 0 50%;
+        background-color: #94def7;
       }
       .image {
         position: absolute;
         left: 0;
         right: 0;
-        margin: 0 auto;
+        margin: 0;
       }
       .image__background {
         width: 100%;
-        height: auto;
         transform: translateZ(0px) scale(1);
         /* transform-origin: 0 50%; */
       }
+
+      /*Enlace volver*/
       .return {
         width: 200px;
         display: flex;
         justify-content: center;
         transform: translateY(40px);
-
       }
       a {
-        color:#C71585 ;
+        color: #c71585;
         text-decoration: none;
         font-family: "jura", sans-serif;
-        font-weight:bold;
-        background-color:#f8bd7d ;
+        font-weight: bold;
+        background-color: #f8bd7d;
         width: 60px;
         border-radius: 20px;
         display: flex;
         justify-content: center;
       }
       a:hover {
-    background-color:#e18c9f;
-    transform: scale(1.2);
-  }
+        background-color: #e18c9f;
+        transform: scale(1.2);
+      }
       .image__middle1 {
         width: 150%;
         height: 130%;
@@ -121,7 +122,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="image image__background">
         <img src="./images/cielo2 (2).avif" alt="" />
       </div>
@@ -143,6 +144,6 @@
       <div class="image image__foreground">
         <img src="./images/paracaidista_preview_rev_1.png" alt="" />
       </div>
-    </div>
+    </main>
   </body>
 </html>

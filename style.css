@@ -256,6 +256,10 @@ footer {
     .go {
         visibility: visible;
     }
+    a {
+        width: 150px;
+        font-size: 18px;
+    }
     .copy {
         font-size: 20px;
     }
