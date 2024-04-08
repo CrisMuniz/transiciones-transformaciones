@@ -15,8 +15,9 @@
 .container {
     background: #9cc3fa;
     width: 100vw;
-    /* height: 100vh; */
 }
+
+/*Transformaciones*/
 .mainTitle {
     font-family: "jura", sans-serif;
     display: flex;
@@ -72,7 +73,7 @@
     transform: rotate(20deg) ;
     transform-origin:left top ;
 }
-/*Para hacer  una Transformación 3D jugamos con el style pero debemos tener en cuenta que hayq ue crear otro contenedor para hacer todo el movimiento*/
+/*Para hacer  una Transformación 3D jugamos con el style pero debemos tener en cuenta que hay que crear otro contenedor para hacer todo el movimiento*/
 .transform3d {
     background-color: gray;
     width: 70px;
@@ -116,11 +117,13 @@
     transform: rotateX(180deg)
 }
 
+/*Efecto Parallax*/
 .go {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    visibility: hidden;;
 }
 a {
     color:#C71585 ;
@@ -138,6 +141,8 @@ a {
     background-color:#e18c9f;
     transform: scale(1.2);
   }
+
+/*Transiciones*/
 .ball {
     width: 50px;
     height: 50px;
@@ -171,4 +176,87 @@ a {
 }
 .ball6 {
     transition-timing-function:  cubic-bezier(.09,.94,1,.6);
+}
+
+/*Footer*/
+footer {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+}
+.copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "jura", sans-serif;
+    font-weight:bold;
+    color:#C850C0;
+    font-size: 16px;
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 30px;
+    }
+    .mainTitle {
+        font-size:22px ;
+    }
+    .list {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 1px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .list li {
+        font-size: 18px;
+    }
+    .copy {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .title {
+        font-size: 36px;
+    }
+    .mainTitle {
+        font-size:28px ;
+    }
+    .list {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        column-gap: 1px;
+        justify-content: center;
+        margin-bottom: 34px;
+    }
+    .list li {
+        font-size: 22px;
+    }
+    .box{
+        width: 90px;
+        height: 90px;
+    }
+    .transform3d {
+        width: 90px;
+        height: 90px;
+    }
+    .face {
+        width: 90px;
+        height: 90px;
+    }
+    .ball {
+        width: 70px;
+        height: 70px;
+    }
+    .go {
+        visibility: visible;
+    }
+    .copy {
+        font-size: 20px;
+    }
 }
