@@ -39,6 +39,7 @@
     padding-top: 20px;
     font-family: "Cormorant Infant", serif;
     font-weight: 500;
+    font-size: 15px;
     font-style: normal;
     display: flex;
     flex-direction: column;
@@ -53,26 +54,37 @@
     border-radius: 30%;
 
 }
-.box1:hover {
+
+.box.box1{
     transform: translate(20px, 20px);
 }
-.box2:hover {
+.btn {
+    margin-top: 30px;
+}
+
+.box.box2 {
     transform: rotate(45deg);
+
 }
-.box3:hover {
-    transform:scale(1.2)
+
+.box.box3{
+    transform:scale(1.2);
 }
-.box4:hover {
-    transform:skew(20deg, 10deg)
+
+.box.box4 {
+    transform:skew(20deg, 10deg);
 }
-.box5:hover {
-    transform: matrix(1, 1.2, -1, 1, 10, 20)
+
+.box.box5 {
+    transform: matrix(1, 1.2, -1, 1, 2, 3);
 }
-.box6:hover {
+.box.box6 {
     /*Necesitamos indicarle el tipo de transformación que queremos y el origen de moviemiento de esa transfotmación*/
     transform: rotate(20deg) ;
     transform-origin:left top ;
 }
+
+
 /*Para hacer  una Transformación 3D jugamos con el style pero debemos tener en cuenta que hay que crear otro contenedor para hacer todo el movimiento*/
 .transform3d {
     background-color: gray;
@@ -84,37 +96,57 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    
 }
-.box7 {
-    transform-style: preserve-3d;
-    margin-top: 0;
-
-}
-.box7:hover {
-    transform: rotateX(25deg);
-}
-
-/*Efecto de voltear la imagen y poder ver la cara de atrás*/
-.box8 {
-    position: relative;
-    transform-style: preserve-3d;
-}
-
-.box8:hover {
-    transform: rotateY(180deg);
-    /* transition: all 2s;  Esto es para darle efecto de voltear la tarjeta*/
-}
-.face {
+.boxTransf3d  {
     width: 70px;
     height: 70px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 30%;
+
+}
+
+.boxTransf3d.box7 {
+    transform: rotateX(25deg);
+    margin-top: 0;
+    transform-style: preserve-3d;
+}
+
+
+/*Efecto de voltear la imagen y poder ver la cara de atrás*/
+.backface {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    border-radius: 30%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+
+}
+.front {
+    width: 70px;
+    height: 70px;
+    /* margin-top: 10px; */
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     border-radius: 30%;
     position: absolute;
     backface-visibility: hidden;
 }
-.face.back {
-    background: gray;
-    transform: rotateX(180deg)
+.back {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    backface-visibility: hidden;
+    border-radius: 30%;
+    /* margin-top: 10px; */
+    /* background-color: gray; */
+    /* transform: rotateY(180deg); */
+}
+.flipBox {
+    transform: rotateY(180deg);
+    background-color: gray;
 }
 
 /*Efecto Parallax*/
@@ -151,31 +183,39 @@ a {
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     border-radius: 50%;
     transition: transform 1s;
-    transition-delay: 0.5s;
+    /* transition-delay: 0.5s; */
 }
-.ball:hover {
+
+.ball.ball1 {
+    transition-timing-function: linear;
     transform: translateX(90px);
 }
-.ball1 {
-    transition-timing-function: linear;
-    
-}
-.ball2 {
+
+
+.ball.ball2 {
     transition-timing-function:  ease;
+    transform: translateX(90px);
 
 }
-.ball3 {
+
+.ball.ball3{
+    transform: translateX(90px);
     transition-timing-function:  ease-in;
-    
+
 }
-.ball4 {
+
+.ball.ball4 {
+    transform: translateX(90px);
     transition-timing-function:  ease-out;
 }
-.ball5 {
+
+.ball.ball5 {
+    transform: translateX(90px);
     transition-timing-function:  ease-in-out;
 }
 .ball6 {
-    transition-timing-function:  cubic-bezier(.09,.94,1,.6);
+    transform: translateX(90px);
+    transition-timing-function:  cubic-bezier(.17,.67,.93,.03);
 }
 
 /*Footer*/
@@ -208,8 +248,9 @@ footer {
     .list {
         display: grid;
         grid-template-columns: 200px 200px 200px;
-        column-gap: 1px;
+        column-gap: 5px;
         justify-content: center;
+        text-align: center;
         margin-bottom: 30px;
     }
     .list li {
@@ -229,10 +270,11 @@ footer {
     }
     .list {
         display: grid;
-        grid-template-columns: 300px 300px 300px;
-        column-gap: 1px;
+        grid-template-columns: 350px 350px 350px;
+        column-gap: 15px;
         justify-content: center;
-        margin-bottom: 34px;
+        text-align: center;
+        margin-bottom: 40px;
     }
     .list li {
         font-size: 22px;
@@ -245,7 +287,15 @@ footer {
         width: 90px;
         height: 90px;
     }
-    .face {
+    .boxTransf3d {
+        width: 90px;
+        height: 90px;
+    }
+    .backface {
+        width: 90px;
+        height: 90px;
+    }
+    .front {
         width: 90px;
         height: 90px;
     }

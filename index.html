@@ -26,50 +26,78 @@
       <main>
         <h1 class="mainTitle"> Transformaciones 2D</h1>
         <ul class="list">
-          <li class="translate">
-            Transform translate
-            <div class="box box1"></div>
+          <li>
+            Transform translate (20px, 20px)
+            <div class="box js_translate" ></div>
+            <button class="btn js_btn1">probar</button>
           </li>
-          <li class="rotate">
-            Transform Rotate
-            <div class="box box2"></div>
+          <li>
+            Transform Rotate (45deg)
+            <div class="box js_rotate"></div>
+            <button class="btn js_btn2">probar</button>
           </li>
-          <li class="scale">
-            Transform Scale
-            <div class="box box3"></div>
+          <li>
+            Transform Scale (1.2)
+            <div class="box js_scale"></div>
+            <button class="btn js_btn3">probar</button>
           </li>
-          <li class="skew">
-            Transform Skew
-            <div class="box box4"></div>
+          <li>
+            Transform Skew (20deg, 10deg)
+            <div class="box js_skew"></div>
+            <button class="btn js_btn4">probar</button>
           </li>
-          <li class="matrix">
-            Transform Matrix
-            <div class="box box5"></div>
+          <li>
+            Transform Matrix (1, 1.2, -1, 1, 2, 3)
+            <div class="box js_matrix"></div>
+            <button class="btn js_btn5">probar</button>
           </li>
-          <li class="origin">
-            Transform Origin
-            <div class="box box6"></div>
+          <li>
+            Transform Origin (rotate(20deg), left top)
+            <div class="box js_origin"></div>
+            <button class="btn js_btn6">probar</button>
           </li>
         </ul>
         <h1 class="mainTitle"> Transformaciones 3D</h1>
         <ul class="list">
-            <li class="style">Transform Style <div class="transform3d"> <div class="box box7"></div></div></li>
-            <li class="backface">Backface Visibility <div class="box box8"><div class=" face back"></div></div></li>
+            <li>Transform Style (preserve-3d, rotateX(25deg))<div class="transform3d"> <div class="boxTransf3d js_style"></div></div>
+              <button class="btn js_btn7">probar</button>
+            </li>
+            <li>Backface Visibility (preserve-3d, rotateY(180deg))
+              <div class="backface js_backface">
+                <div class=" front"><div>
+
+                </div class=" back "></div>
+              </div>
+              <button class="btn js_btn8">probar</button>
+            </li>
         </ul>
         <div class="go"><a href="./parallax-paracaidista.html">Efecto Parallax</a></div>
         <h1 class="mainTitle">Transiciones Timing-Function</h1>
         <ul class="list">
-            <li class="linear">Linear<div class="ball ball1"></div></li>
-            <li class="ease">Ease<div class="ball ball2"></div></li>
-            <li class="ease-in">Ease-in<div class="ball ball3"></div></li>
-            <li class="ease-out">Ease-out<div class="ball ball4"></div></li>
-            <li class="ease-in-out">Ease-in-out<div class="ball ball5"></div></li>
-            <li class="cubic-bezier">Cubic-bezier<div class="ball ball6"></div></li>
+            <li>Linear<div class="ball js_linear"></div>
+              <button class="btn js_btn9">probar</button>
+            </li>
+            <li>Ease<div class="ball js_ease"></div>
+              <button class="btn js_btn10">probar</button>
+            </li>
+            <li>Ease-in<div class="ball js_easeIn"></div>
+              <button class="btn js_btn11">probar</button>
+            </li>
+            <li>Ease-out<div class="ball js_easeOut"></div>
+              <button class="btn js_btn12">probar</button>
+            </li>
+            <li>Ease-in-out<div class="ball js_easeInOut"></div>
+              <button class="btn js_btn13">probar</button>
+            </li>
+            <li>Cubic-bezier<div class="ball js_cubicBezier"></div>
+              <button class="btn js_btn14">probar</button>
+            </li>
         </ul>
       </main>
       <footer>
         <div class="copy">&copy;Cris Muñiz 2024</div>
       </footer>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
